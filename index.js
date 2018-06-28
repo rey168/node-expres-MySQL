@@ -15,7 +15,7 @@ app.post('/recibirPost', function(req, res){
   res.send("Nombre es : " + nombre + ' ' + "Apellido es : " +  apellido);   // echo the result back
 });
 
-var connection = mysql.createConnection({
+/*var connection = mysql.createConnection({
   host     : 'localhost',
   user     : 'dbuser',
   password : 's3kreee7'
@@ -28,7 +28,7 @@ connection.query('SELECT 1 + 1 AS solution', function(err, rows, fields) {
   console.log('The solution is: ', rows[0].solution);
 });
 
-connection.end();
+connection.end();*/
 
 app.get('/', function (req, res) {
   res.send('Hello World!');
