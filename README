@@ -1,0 +1,8 @@
+Aplicasión Node con express,React y MySQL.
+
+Para levantar el servidor de Node:
+
+Ejecutar PORT=3001 node bin/www
+
+Para levantar la aplicasion de React:
+Adentro del directorio de cliente ejecutar npm start
