@@ -48,7 +48,7 @@ app.post('/loginUsuario', function(req, res, next) {
 app.get('/listaUsuarios', function(req, res, next) {
 
     req.getConnection(function(error, conn) {
-        conn.query('SELECT * FROM users ORDER BY id DESC', function(err, rows, fields) {
+        conn.query('SELECT id, name, age, email FROM users', function(err, rows, fields) {
             res.json({
                 codigo: '0',
                 lista: rows
