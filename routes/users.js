@@ -55,7 +55,6 @@ app.get('/listaUsuarios', function(req, res, next) {
             });
         })
     })
-		next();
 })
 
 
