@@ -40,7 +40,8 @@ app.post('/loginUsuario', function(req, res, next) {
             error_msg += error.msg + ' , '
         })
         res.json({
-            message: error_msg
+            message: error_msg,
+            codigo: '1'
         });
     }
 })
@@ -98,7 +99,8 @@ app.post('/agregarUsuarios', function(req, res, next) {
             error_msg += error.msg + ' , '
         })
         res.json({
-            message: error_msg
+            message: error_msg,
+            codigo: '1'
         });
     }
 })
@@ -141,7 +143,8 @@ app.put('/editarUsuarios', function(req, res, next) {
             error_msg += error.msg + ' , '
         })
         res.json({
-            message: error_msg
+            message: error_msg,
+            codigo: '1'
         });
 
     }
