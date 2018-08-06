@@ -108,6 +108,6 @@ app.use(flash())
 app.use('/', index)
 app.use('/api/users', users)
 
-app.listen(3000, function(){
-	console.log('Server running at port 3000: http://127.0.0.1:3000')
+app.listen(3001, function(){
+	console.log('Server running at port 3000: http://127.0.0.1:3001')
 })
