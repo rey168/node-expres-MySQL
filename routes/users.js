@@ -148,19 +148,9 @@ app.post('/agregarUsuarios', function(req, res, next) {
     }
 })
 
-var storage = multer.diskStorage({
-    destination: (req, file, cb) => {
-      cb(null, 'imagenes/')
-    },
-    filename: (req, file, cb) => {
-      cb(null, file.fieldname + '-' + Date.now() + '.jpg')
-    }
-});
-
-var upload = multer({storage: storage});
 
 //Servicio pra crear nuevo cliente.
-app.post('/agregarClientes',  upload.single('image'), (req, res, next) => {
+app.post('/agregarClientes', function(req, res, next) {
     req.assert('name', 'Nombre es requerido').notEmpty(); //Validate name
     req.assert('descrip', 'Descripción es requerida').notEmpty(); //Validate age
     req.assert('UrlWeb', 'Se requiere una Url Web.').notEmpty(); //Validate email
