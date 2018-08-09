@@ -173,8 +173,7 @@ app.post('/agregarClientes',  upload.single('image'), (req, res, next) => {
         var user = {
             name: req.sanitize('name').escape().trim(),
             descrip: req.sanitize('descrip').escape().trim(),
-            UrlWeb: req.sanitize('UrlWeb').escape().trim(),
-            image:'imagenes/' + req.file.fieldname
+            UrlWeb: req.sanitize('UrlWeb').escape().trim()
         }
 
         req.getConnection(function(error, conn) {
