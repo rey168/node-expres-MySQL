@@ -2,7 +2,11 @@ var express = require('express');
 var multer  = require('multer')
 var app = express();
 
-
+app.use(function(req, res, next) {
+  res.header("Access-Control-Allow-Origin", "*");
+  res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
+  next();
+});
 
 //Destino y Servicio para cargar imagenes y archivos.
 var storage = multer.diskStorage({
